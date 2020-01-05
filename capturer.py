@@ -39,7 +39,7 @@ if (person and captures):
             i += 1
             roi_gray = gray[yf:yf+hf, xf:xf+wf] 
 
-            img_item = str(int(time.time()*1000)) + ".png"
+            img_item = str(int(time.time())) + ".png"
             try:
                 os.mkdir(img_dir + "/" + person)
             except FileExistsError:
