@@ -11,6 +11,11 @@ width = cap.get(3)
 height = cap.get(4)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+try:
+    os.mkdir("images")
+except FileExistsError:
+    pass
+
 img_dir = os.path.join(BASE_DIR, "images")
 
 parser = argparse.ArgumentParser()
